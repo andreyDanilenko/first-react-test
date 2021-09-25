@@ -25,23 +25,34 @@ const generateSaleUse = () => ({
 }[getRandomInt(0, 3)]);
 
 const generatePoster = () => ({
-  0: 'bork.png',
-  1: 'burger.png',
-  2: 'evroset.png',
-  3: 'lamoda.png',
-  4: 'mvideo.png',
-  5: 'technopark.png',
-}[getRandomInt(0, 4)]);
+  0: '../../assets/img/bork.png',
+  1: '../../assets/img/burger.png',
+  2: '../../assets/img/evroset.png',
+  3: '../../assets/img/lamoda.png',
+  4: '../../assets/img/mvideo.png',
+  5: '../../assets/img/technopark.png',
+  6: '../../assets/img/booking.png',
+  7: '../../assets/img/ozon.png',
+  8: '../../assets/img/sberbank.png',
+  9: '../../assets/img/tez.png',
+  10: '../../assets/img/tripster.png',
+}[getRandomInt(0, 10)]);
 
+function createId() {
+  const random = Math.random();
+  return random.toString(10).substr(10);
+}
 
 const generateObject = () => (
   {
+    'id': createId(),
     'poster': generatePoster(),
     'bonusSave': generateSaleSave(),
     'bonusUse': generateSaleUse(),
-    'brand': generateBrand(),
+    'name': generateBrand(),
+    'isUse': Boolean(getRandomInt(0, 1)),
   }
 );
 
-const CARD_COUNT = 23;
+const CARD_COUNT = 7;
 export const cardData = new Array(CARD_COUNT).fill().map(() => generateObject());

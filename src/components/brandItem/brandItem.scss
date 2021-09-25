@@ -1,10 +1,11 @@
 .brand {
+  width: 218px;
   padding: 20px;
-  max-width: 218px;
+  margin: 0 10px 16px;
   border-radius: 8px;
   background-color: white;
 
-  &__sale {
+  &__percent {
     font-weight: 500;
     font-size: 24px;
     line-height: 24px;
@@ -22,11 +23,14 @@
   &__poster {
     display: block;
     margin: 0 auto;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 120px;
   }
 
   &__title {
     text-align: center;
-    margin: 45px 0 15px;
+    margin: 40px 0 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;

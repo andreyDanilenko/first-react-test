@@ -1,0 +1,47 @@
+$sm: 480px;
+$md: 768px;
+$lg: 1024px;
+
+@mixin xs-only {
+  @media (max-width: #{$lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  display: block;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include sm {
+    max-width: 640px + 2 * 10px;
+  }
+
+  @include md {
+    max-width: 720px + 2 * 10px;
+  }
+
+  @include lg {
+    max-width: 1170px + 2 * 10px;
+  }
+}

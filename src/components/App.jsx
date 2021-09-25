@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import './app.scss';
-import BrandItem from "./brandItem/BrandItem";
+import BrandsList from "./brandsList/BrandsList";
 import Navbar from "./navbar/Navbar";
+import { cardData } from "../mock/data";
 
 const App = () => {
+  const [brands, setBrands] = useState(cardData)
+
   return (
     <div className="title">
       <Navbar />
-      <BrandItem />
+      <BrandsList brands={brands} title='Партнеры и предложения' />
     </div>
   )
 }
