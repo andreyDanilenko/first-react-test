@@ -1,0 +1,35 @@
+.brand {
+  padding: 20px;
+  max-width: 218px;
+  border-radius: 8px;
+  background-color: white;
+
+  &__sale {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__description {
+    margin-top: 4px;
+    margin-bottom: 27px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0.4;
+  }
+
+  &__poster {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 45px 0 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    opacity: 0.5;
+  }
+}
