@@ -14,7 +14,6 @@ const App = () => {
     setBrands([...cardData].filter((film) => film.isСategory === filter))
   }
 
-
   return (
     <div className="title">
       <Navbar />

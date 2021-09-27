@@ -2,7 +2,6 @@ import React from "react";
 import MyButton from "../button/MyButton";
 import './myFilter.scss';
 
-
 const MyFilter = ({ options, onChange }) => {
   return (
     <div className="filter">
