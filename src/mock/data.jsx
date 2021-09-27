@@ -38,6 +38,20 @@ const generatePoster = () => ({
   10: '../../assets/img/tripster.png',
 }[getRandomInt(0, 10)]);
 
+const generateCategory = () => ({
+  0: 'all',
+  1: 'popular',
+  2: 'markets',
+  3: 'cafe',
+  4: 'taxi',
+  5: 'beauty',
+  6: 'electronics',
+  7: 'zoo',
+  8: 'cinema',
+  9: 'connect',
+  10: 'lottery',
+}[getRandomInt(0, 10)]);
+
 function createId() {
   const random = Math.random();
   return random.toString(10).substr(10);
@@ -51,8 +65,9 @@ const generateObject = () => (
     'bonusUse': generateSaleUse(),
     'name': generateBrand(),
     'isUse': Boolean(getRandomInt(0, 1)),
+    'isСategory': generateCategory(),
   }
 );
 
-const CARD_COUNT = 7;
+const CARD_COUNT = 25;
 export const cardData = new Array(CARD_COUNT).fill().map(() => generateObject());
