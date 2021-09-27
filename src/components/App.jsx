@@ -1,25 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import './app.scss';
-import BrandsList from "./brandsList/BrandsList";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./navbar/Navbar";
-import { cardData } from "../mock/data";
+import AppRouter from "./appRouter/AppRouter";
 
 const App = () => {
-  const [brands, setBrands] = useState(cardData)
-
-  const filterBrands = (filter) => {
-    if (filter === 'all') {
-      return setBrands([...cardData]);
-    }
-    setBrands([...cardData].filter((film) => film.isСategory === filter))
-  }
-
   return (
-    <div className="title">
+    <BrowserRouter>
       <Navbar />
-      <BrandsList brands={brands} title='Партнеры и предложения' filterBrands={filterBrands} />
-    </div>
-  )
+      <AppRouter />
+    </BrowserRouter>
+
+  );
 }
 
 export default App;

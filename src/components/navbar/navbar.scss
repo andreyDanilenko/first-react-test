@@ -1,3 +1,32 @@
 @import "/src/styles/variables/colors.scss";
 
+.navbar {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__logo {
+    display: block;
+    height: 100%;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__links li {
+    margin-right: 20px;
+  }
+
+  &__links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    opacity: 0.5;
+  }
+}

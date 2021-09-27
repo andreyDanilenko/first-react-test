@@ -27,7 +27,7 @@ const BrandsList = ({ brands, title, filterBrands }) => {
           <BrandItem brand={brand} key={brand.id} />
         )}
       </div>
-      <MyButton>Еще партнеров</MyButton>
+      {brands.length ? <MyButton>Еще {brands.length} партнеров</MyButton> : ''}
     </div>
   )
 }

@@ -1,0 +1,16 @@
+.myButton {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.myButton.filterActive {
+  color: white;
+  background-color: #00d36d;
+}
