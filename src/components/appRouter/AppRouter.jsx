@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { routes } from "../../router/routes";
 
 const AppRouter = () => {
-  console.log(routes);
   return (
     <Switch>
       {routes.map(route =>
@@ -14,7 +13,6 @@ const AppRouter = () => {
         />
       )}
     </Switch>
-
   )
 }
 

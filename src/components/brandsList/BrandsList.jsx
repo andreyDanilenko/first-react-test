@@ -6,7 +6,7 @@ import MyButton from '../UI/button/MyButton';
 import MyFilter from '../UI/filter/MyFilter';
 
 const BrandsList = ({ brands, title, filterBrands }) => {
-  const toggle = false; 
+  const toggle = true; 
   return (
     <div className="brands container">
       <h1 className="brands__title">{title}</h1>
