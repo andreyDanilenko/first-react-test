@@ -67,6 +67,11 @@ const generateObject = () => (
     'isUse': Boolean(getRandomInt(0, 1)),
     'isСategory': generateCategory(),
     'popular': getRandomInt(0, 10) < 2 ? true : false,
+    'promo': {
+      'title': 'Apple Music за СПАСИБО',
+      'poster': '../../assets/img/apple-promo.jpg',
+      'time': 'C 17 Декабря 2018 г. по 17 Декабря 2019 г.',
+    }
   }
 );
 

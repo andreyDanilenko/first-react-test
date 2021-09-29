@@ -2,6 +2,8 @@ import React from "react";
 import Logo from '../../assets/img/logo.png';
 import { Link } from "react-router-dom";
 import './navbar.scss';
+import MyButton from "../UI/button/MyButton";
+import cl from '../UI/button/MyButton.module.scss';
 
 const Navbar = () => {
   return (
@@ -21,7 +23,7 @@ const Navbar = () => {
           <li><Link to="/about">О программе</Link></li>
           <li><Link to="/charity">Благотворительность</Link></li>
         </ul>
-        <div className="navbar__login">Войти</div>
+        <MyButton>Войти</MyButton>
       </div>
     </div>
   )
