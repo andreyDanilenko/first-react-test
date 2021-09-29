@@ -1,3 +1,4 @@
+import BrandPage from "../components/brandPage/BrandPage";
 import About from "../pages/About";
 import AirTickets from "../pages/AirTickets";
 import Charity from "../pages/Charity";
@@ -19,6 +20,9 @@ export const routes = [
   { path: '/lottery', component: Lottery, exact: true },
   { path: '/mobile-app', component: MobileApp, exact: true },
   { path: '/partners', component: Partners, exact: true },
+  { path: '/', component: Partners, exact: true },
   { path: '/railway-tickets', component: RailwayTickets, exact: true },
+  { path: '/partners/:id', component: BrandPage },
+  { path: '/:id', component: BrandPage },
 ];
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import '../components/app.scss'
 import BrandsList from "../components/brandsList/BrandsList";
-import Navbar from "../components/navbar/Navbar";
 import { cardData } from "../mock/data";
 
 const Partners = () => {
@@ -11,7 +10,11 @@ const Partners = () => {
     if (filter === 'all') {
       return setBrands([...cardData]);
     }
-    setBrands([...cardData].filter((film) => film.isСategory === filter))
+    if (filter === 'popular') {
+      return setBrands([...cardData].filter((brand) => brand.popular))
+    }
+
+    setBrands([...cardData].filter((brand) => brand.isСategory === filter))
   }
 
   return (

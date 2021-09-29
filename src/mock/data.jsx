@@ -66,6 +66,7 @@ const generateObject = () => (
     'name': generateBrand(),
     'isUse': Boolean(getRandomInt(0, 1)),
     'isСategory': generateCategory(),
+    'popular': getRandomInt(0, 10) < 2 ? true : false,
   }
 );
 
