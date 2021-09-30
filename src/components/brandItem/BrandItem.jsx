@@ -4,7 +4,6 @@ import './brandItem.scss'
 
 const BrandItem = ({ brand, toggle }) => {
   const history = useHistory()
-
   return (
     <div className="brand" onClick={() => history.push('/partners' + '/' + brand.name)}>
       <div className="brand__percent">{toggle ? brand.bonusSave : brand.bonusUse}</div>

@@ -62,7 +62,7 @@ const generateObject = () => (
     'id': createId(),
     'poster': generatePoster(),
     'bonusSave': generateSaleSave(),
-    'bonusUse': generateSaleUse(),
+    'bonusUse': getRandomInt(0, 10) < 7 ? false : generateSaleUse(),
     'name': generateBrand(),
     'isUse': Boolean(getRandomInt(0, 1)),
     'isСategory': generateCategory(),
