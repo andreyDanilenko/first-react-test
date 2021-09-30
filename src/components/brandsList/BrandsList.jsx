@@ -5,19 +5,34 @@ import { filterOptions } from '../../utils/flterOptions';
 import MyButton from '../UI/button/MyButton';
 import MyFilter from '../UI/filter/MyFilter';
 
-const BrandsList = ({ brands, title, filterBrands }) => {
+const BrandsList = ({ brandData, title }) => {
   const [currentOptions, setCurrentOptions] = useState(10)
   const [renderOptions, setRenderOptions] = useState(true)
   const [currentBrands, setCurrentBrands] = useState(5)
-  const [renderBrands, setRenderBrands] = useState(true)
+  const [brands, setBrands] = useState(brandData)
 
+  const filterBrands = (filter) => {
+    setCurrentBrands(5)
+
+    if (filter === 'all') {
+      return setBrands([...brandData]);
+    }
+
+    if (filter === 'popular') {
+      return setBrands([...brandData].filter((brand) => brand.popular))
+    }
+
+    setBrands([...brandData].filter((brand) => brand.isСategory === filter))
+  }
 
   const onMoreOptions = () => {
     setCurrentOptions(filterOptions.length)
     setRenderOptions(false);
   }
 
-
+  const onMoreBrands = () => {
+    setCurrentBrands(currentBrands + 5)
+  }
 
   const toggle = false;
   return (
@@ -30,12 +45,15 @@ const BrandsList = ({ brands, title, filterBrands }) => {
         options={filterOptions.slice(0, currentOptions)} />
 
       <div className="brands__wrapper">
-        {brands.map(brand =>
+        {brands.slice(0, currentBrands).map(brand =>
           <BrandItem brand={brand} toggle={toggle} key={brand.id} />
         )}
       </div>
 
-      {brands.length > currentBrands ? <MyButton>Еще {brands.length} партнеров</MyButton> : ''}
+      {brands.length > currentBrands ?
+        <MyButton onClick={() => onMoreBrands()}>
+          Еще {brands.length - currentBrands} партнеров
+        </MyButton> : ''}
     </div>
   )
 }

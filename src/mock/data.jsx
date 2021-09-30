@@ -76,4 +76,4 @@ const generateObject = () => (
 );
 
 const CARD_COUNT = 25;
-export const cardData = new Array(CARD_COUNT).fill().map(() => generateObject());
+export const brandData = new Array(CARD_COUNT).fill().map(() => generateObject());
