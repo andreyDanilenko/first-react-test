@@ -11,13 +11,13 @@ export const getTitleButton = (num) => {
     || numStr === '13'
     || numStr === '14';
   if (isOne) {
-    str = 'партнера'
+    str = numStr + ' партнера'
   }
   if (isTwo) {
-    str = 'партнер'
+    str = numStr + ' партнер'
   }
   if (isThree) {
-    str = 'партнеров'
+    str = numStr + ' партнеров'
   }
   return str;
 }

@@ -84,7 +84,7 @@ const BrandsList = ({ brandData, title }) => {
 
         {brands.length > currentBrands ?
           <MyButton onClick={() => onMoreBrands()}>
-            Еще {brands.length - currentBrands} {titleButton}
+            Еще {titleButton}
           </MyButton> : ''}
       </div>
 
