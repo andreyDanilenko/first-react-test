@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import BrandItem from '../brandItem/BrandItem';
-import './brandsList.scss'
+import './brandsList.scss';
 import { filterOptions } from '../../utils/flterOptions';
+import { getTitleButton } from '../../utils/utils';
 import MyButton from '../UI/button/MyButton';
 import MyFilter from '../UI/filter/MyFilter';
 
@@ -34,6 +35,8 @@ const BrandsList = ({ brandData, title }) => {
     setCurrentBrands(currentBrands + 5)
   }
 
+  const titleButton = getTitleButton(brands.length - currentBrands);
+
   const toggle = false;
   return (
     <div className="brands container">
@@ -44,16 +47,16 @@ const BrandsList = ({ brandData, title }) => {
         onMore={{ onMoreOptions, renderOptions }}
         options={filterOptions.slice(0, currentOptions)} />
 
-      <div className="brands__wrapper">
+      <div className="brands__item">
         {brands.slice(0, currentBrands).map(brand =>
-          <BrandItem brand={brand} toggle={toggle} key={brand.id} />
-        )}
+          <BrandItem brand={brand} toggle={toggle} key={brand.id} />)}
+
+        {brands.length > currentBrands ?
+          <MyButton onClick={() => onMoreBrands()}>
+            Еще {brands.length - currentBrands} {titleButton}
+          </MyButton> : ''}
       </div>
 
-      {brands.length > currentBrands ?
-        <MyButton onClick={() => onMoreBrands()}>
-          Еще {brands.length - currentBrands} партнеров
-        </MyButton> : ''}
     </div>
   )
 }
