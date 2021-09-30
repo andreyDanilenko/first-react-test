@@ -4,8 +4,8 @@ import BrandsList from "../components/brandsList/BrandsList";
 import { cardData } from "../mock/data";
 
 const Partners = () => {
-  const [brands, setBrands] = useState(cardData)
 
+  const [brands, setBrands] = useState(cardData)
   const filterBrands = (filter) => {
     if (filter === 'all') {
       return setBrands([...cardData]);
@@ -19,7 +19,11 @@ const Partners = () => {
 
   return (
     <div>
-      <BrandsList brands={brands} title='Партнеры и предложения' filterBrands={filterBrands} />
+      <BrandsList
+        brands={brands}
+        title='Партнеры и предложения'
+        filterBrands={filterBrands}
+      />
     </div>
   )
 }

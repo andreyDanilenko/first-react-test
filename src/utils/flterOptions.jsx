@@ -9,5 +9,13 @@ export const filterOptions = [
   { value: 'zoo', name: 'Зоотовары' },
   { value: 'cinema', name: 'Кино и театр' },
   { value: 'connect', name: 'Связь и интерент' },
-  { value: 'lottery', name: 'Лотереи' }
+  { value: 'lottery', name: 'Лотереи' },
+  { value: 'sport', name: 'Спорт' },
+  { value: 'trip', name: 'Путешествия' },
+  { value: 'health', name: 'Здоровье' },
+  { value: 'insurance', name: 'Страхование' },
+  { value: 'immovables', name: 'Недвижимость' },
+  { value: 'entertainment', name: 'Развлечения' },
+  { value: 'education', name: 'Образование' },
 ]
+
