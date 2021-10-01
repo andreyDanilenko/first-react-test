@@ -1,4 +1,4 @@
-.switch-btn {
+.switchBtn {
   display: inline-block;
   width: 58px; /* ширина */
   height: 24px; /* высота */
@@ -13,7 +13,7 @@
   position: relative;
   transition-duration: 300ms; /* анимация */
 }
-.switch-btn::after {
+.switchBtn::after {
   content: "";
   height: 18px; /* высота кнопки */
   width: 18px; /* ширина кнопки */
@@ -26,6 +26,6 @@
   z-index: 1;
 }
 
-.switch-on::after {
+.switchOnBtn::after {
   left: 36px;
 }

@@ -3,7 +3,6 @@ import Logo from '../../assets/img/logo.png';
 import { Link } from "react-router-dom";
 import './navbar.scss';
 import MyButton from "../UI/button/MyButton";
-import cl from '../UI/button/MyButton.module.scss';
 
 const Navbar = () => {
   return (
@@ -23,7 +22,9 @@ const Navbar = () => {
           <li><Link to="/about">О программе</Link></li>
           <li><Link to="/charity">Благотворительность</Link></li>
         </ul>
-        <MyButton>Войти</MyButton>
+        <MyButton
+          typeStyle={'auth'}>Войти
+        </MyButton>
       </div>
     </div>
   )

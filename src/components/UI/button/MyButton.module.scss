@@ -1,16 +1,35 @@
 .myButton {
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 8px;
   background-color: white;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 24px;
   margin: 4px;
   border: none;
   cursor: pointer;
 }
 
-.myButton.filterActive {
+.myButtonFilter:hover {
+  transition: 0.8s;
+  color: #00d36d;
+  box-shadow: inset 0 0 0 1px #00d36d;
+}
+
+.myButtonMore {
   color: white;
   background-color: #00d36d;
+}
+
+.myButtonMore:hover {
+  transition: 0.8s;
+  background-color: #21ba72;
+}
+
+.myButtonAuth {
+  padding: 5px 20px 4px;
+  background-color: white;
+  border: 1px solid #00d36d;
+  color: #00d36d;
+  font-size: 14px;
 }

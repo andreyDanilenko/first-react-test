@@ -83,7 +83,9 @@ const BrandsList = ({ brandData, title }) => {
         )}
 
         {brands.length > currentBrands ?
-          <MyButton onClick={() => onMoreBrands()}>
+          <MyButton
+            typeStyle={'more'}
+            onClick={() => onMoreBrands()}>
             Еще {titleButton}
           </MyButton> : ''}
       </div>

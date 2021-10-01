@@ -1,10 +1,9 @@
 import React from 'react';
-import './mySwitchButton.scss'
+import switchButton from './mySwitchButton.module.scss'
 
-
-const MySwitchButton = ({ ...props }) => {
+const MySwitchButton = ({ onClick }) => {
   return (
-    <button {...props} className='switch-btn' ></button>
+    <button onClick={onClick} className={switchButton.switchBtn} ></button>
   );
 };
 

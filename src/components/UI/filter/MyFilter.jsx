@@ -6,10 +6,15 @@ const MyFilter = ({ options, onChange, onMore }) => {
   return (
     <div className="filter">
       {options.map(option =>
-        <MyButton onClick={() => onChange(option.value)} key={option.value} value={option.value}>{option.name}</MyButton>
+        <MyButton
+
+          typeStyle={'filter'}
+          onClick={() => onChange(option.value)}
+          key={option.value}
+          value={option.value}>{option.name}
+        </MyButton>
       )}
-      {onMore.renderOptions ? <MyButton onClick={() => onMore.onMoreOptions()} >...</MyButton> : ''
-      }
+      {onMore.renderOptions ? <MyButton typeStyle={'filter'} onClick={() => onMore.onMoreOptions()} >...</MyButton> : ''}
     </div>
   )
 }
