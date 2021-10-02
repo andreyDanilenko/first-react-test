@@ -3,6 +3,7 @@ import About from "../pages/About";
 import AirTickets from "../pages/AirTickets";
 import Charity from "../pages/Charity";
 import Coupons from "../pages/Coupons";
+import Home from "../pages/Home";
 import Hotels from "../pages/Hotels";
 import Impressions from "../pages/Impressions";
 import Lottery from "../pages/Lottery";
@@ -20,9 +21,8 @@ export const routes = [
   { path: '/lottery', component: Lottery, exact: true },
   { path: '/mobile-app', component: MobileApp, exact: true },
   { path: '/partners', component: Partners, exact: true },
-  { path: '/', component: Partners, exact: true },
+  { path: '/', component: Home, exact: true },
   { path: '/railway-tickets', component: RailwayTickets, exact: true },
   { path: '/partners/:id', component: BrandPage },
-  { path: '/:id', component: BrandPage },
 ];
 

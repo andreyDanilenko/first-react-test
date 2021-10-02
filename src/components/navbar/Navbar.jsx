@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from '../../assets/img/logo.png';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './navbar.scss';
 import MyButton from "../UI/button/MyButton";
 
@@ -11,16 +11,16 @@ const Navbar = () => {
         <img src={Logo} alt="logo" className="navbar__logo" />
         <ul className="navbar__links">
           {/* Link позволяет испльзовать навигацию без перезагрузки страницы */}
-          <li><Link to="/coupons">Купоны</Link></li>
-          <li><Link to="/impressions">Впечатления</Link></li>
-          <li><Link to="/air-tickets">Авиабилеты</Link></li>
-          <li><Link to="/railway-tickets">Ж/д билеты</Link></li>
-          <li><Link to="/hotels">Отели</Link></li>
-          <li><Link to="/partners">Партнеры и предложения</Link></li>
-          <li><Link to="/mobile-app">Мобильное приложение</Link></li>
-          <li><Link to="/lottery">Лотерея</Link></li>
-          <li><Link to="/about">О программе</Link></li>
-          <li><Link to="/charity">Благотворительность</Link></li>
+          <li><NavLink activeClassName="active" to="/coupons">Купоны</NavLink></li>
+          <li><NavLink to="/impressions">Впечатления</NavLink></li>
+          <li><NavLink to="/air-tickets">Авиабилеты</NavLink></li>
+          <li><NavLink to="/railway-tickets">Ж/д билеты</NavLink></li>
+          <li><NavLink to="/hotels">Отели</NavLink></li>
+          <li><NavLink to="/partners">Партнеры и предложения</NavLink></li>
+          <li><NavLink to="/mobile-app">Мобильное приложение</NavLink></li>
+          <li><NavLink to="/lottery">Лотерея</NavLink></li>
+          <li><NavLink to="/about">О программе</NavLink></li>
+          <li><NavLink to="/charity">Благотворительность</NavLink></li>
         </ul>
         <MyButton
           typeStyle={'auth'}>Войти
