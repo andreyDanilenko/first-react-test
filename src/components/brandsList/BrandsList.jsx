@@ -9,7 +9,7 @@ import MySwitchButton from '../UI/switchButton/MySwitchButton';
 
 const BrandsList = ({ brandData, title }) => {
   const [brands, setBrands] = useState(brandData)
-  const [currentOptions, setCurrentOptions] = useState(10)
+  const [currentOptions, setCurrentOptions] = useState(9)
   const [renderOptions, setRenderOptions] = useState(true)
   const [toggle, setToggle] = useState(true)
   const [currentBrands, setCurrentBrands] = useState(5)
@@ -63,25 +63,33 @@ const BrandsList = ({ brandData, title }) => {
     filterBrands(filter)
     setBrands([...filtersBrand])
   }
-
+  console.log(toggle);
   const titleButton = getTitleButton(brands.length - currentBrands);
 
   return (
     <div className="brands container">
       <h1 className="brands__title">{title}</h1>
 
-      <MyFilter
-        onChange={filterBrands}
-        onMore={{ onMoreOptions, renderOptions }}
-        options={filterOptions.slice(0, currentOptions)} />
+      <div className="brands__filter">
+        <MyFilter
+          onChange={filterBrands}
+          onMore={{ onMoreOptions, renderOptions }}
+          options={filterOptions.slice(0, currentOptions)} />
+      </div>
 
-      <MySwitchButton onClick={() => onSwitch()} />
+      <div className="brands__button-switch" onClick={() => onSwitch()}>
+        <a className={toggle ? "brands__link-switch-save brands__link-switch-save--active" : "brands__link-switch-save"}  >Начисляют спасибо</a>
+        <MySwitchButton typeStyle={toggle ? '' : 'use'} />
+        <a className={!toggle ? "brands__link-switch-use brands__link-switch-use--active" : "brands__link-switch-use"}>Принимают спасибо</a>
+      </div>
 
       <div className="brands__item">
         {brands.slice(0, currentBrands).map(brand =>
           <BrandItem brand={brand} toggle={toggle} key={brand.id} />
         )}
+      </div>
 
+      <div className="brands__button-more">
         {brands.length > currentBrands ?
           <MyButton
             typeStyle={'more'}

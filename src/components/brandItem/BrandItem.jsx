@@ -7,7 +7,7 @@ const BrandItem = ({ brand, toggle }) => {
   return (
     <div className="brand" onClick={() => history.push('/partners' + '/' + brand.name)}>
       <div className="brand__percent">{toggle ? brand.bonusSave : brand.bonusUse}</div>
-      <div className="brand__description">{toggle ? 'от суммы покупки' : 'скидка за бонусы'}</div>
+      <div className="brand__description">{toggle ? 'Спасибо от суммы покупки' : 'Скидка за бонусы'}</div>
       <img className="brand__poster" src={brand.poster} />
       <div className="brand__title">{brand.name}</div>
     </div>
