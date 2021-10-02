@@ -17,11 +17,11 @@ const BrandsList = ({ brandData, title }) => {
   const [filtersBrand, setFilterBrand] = useState()
 
   const filterBrands = (filter) => {
-    setFilterBrand([...brands])
     setFilter(filter)
     setCurrentBrands(5)
 
     if (filter === 'all') {
+      setFilterBrand([...brandData])
       if (!toggle) {
         return setBrands([...brandData].filter((brand) => !brand.bonusUse === false))
       }
@@ -30,6 +30,7 @@ const BrandsList = ({ brandData, title }) => {
     }
 
     if (filter === 'popular') {
+      setFilterBrand([...brandData].filter((brand) => brand.popular))
       if (!toggle) {
         return setBrands([...brandData].filter((brand) => brand.popular && !brand.bonusUse === false))
       }
@@ -37,6 +38,8 @@ const BrandsList = ({ brandData, title }) => {
       return setBrands([...brandData].filter((brand) => brand.popular))
     }
 
+
+    setFilterBrand([...brandData].filter((brand) => brand.isСategory === filter))
     if (!toggle) {
       return setBrands([...brandData].filter((brand) => brand.isСategory === filter && !brand.bonusUse === false))
     }
