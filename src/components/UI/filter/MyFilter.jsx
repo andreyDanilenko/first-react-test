@@ -7,7 +7,6 @@ const MyFilter = ({ options, onChange, onMore }) => {
     <div className="filter">
       {options.map(option =>
         <MyButton
-
           typeStyle={'filter'}
           onClick={() => onChange(option.value)}
           key={option.value}
