@@ -10,7 +10,6 @@ const MySwitchButton = ({ onClick, typeStyle }) => {
       break;
   }
 
-  console.log(typeStyle);
   return (
     <button onClick={onClick} className={className} ></button>
   );

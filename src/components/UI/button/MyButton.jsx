@@ -1,23 +1,29 @@
 import React from 'react';
 import classButton from './MyButton.module.scss'
 
-const MyButton = ({ children, onClick, typeStyle }) => {
-  let className = classButton.myButton;
+const MyButton = ({ children, ...props }) => {
+  let className = classButton.myButton + ' ';
 
-  switch (typeStyle) {
+  console.log(props.active);
+
+  switch (props.typeStyle) {
     case 'more':
-      className = classButton.myButton + ' ' + classButton.myButtonMore
+      className += classButton.myButtonMore;
       break;
     case 'auth':
-      className = classButton.myButton + ' ' + classButton.myButtonAuth
+      className += classButton.myButtonAuth;
       break;
     case 'filter':
-      className = classButton.myButton + ' ' + classButton.myButtonFilter
+      className += classButton.myButtonFilter;
       break;
   }
 
+  if (props.active === 'true') {
+    className = className + ' ' + classButton.myButtonFilterActive;
+  }
+
   return (
-    <button onClick={onClick} className={className}>
+    <button {...props} className={className}>
       {children}
     </button>
   );

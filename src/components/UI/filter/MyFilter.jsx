@@ -2,7 +2,7 @@ import React from "react";
 import MyButton from "../button/MyButton";
 import './myFilter.scss';
 
-const MyFilter = ({ options, onChange, onMore }) => {
+const MyFilter = ({ options, onChange, onMore, selectedFilter }) => {
   return (
     <div className="filter">
       {options.map(option =>
@@ -10,6 +10,7 @@ const MyFilter = ({ options, onChange, onMore }) => {
           typeStyle={'filter'}
           onClick={() => onChange(option.value)}
           key={option.value}
+          active={String(option.value === selectedFilter)}
           value={option.value}>{option.name}
         </MyButton>
       )}

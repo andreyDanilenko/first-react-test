@@ -16,6 +16,16 @@
   box-shadow: inset 0 0 0 1px #00d36d;
 }
 
+.myButtonFilterActive {
+  color: white;
+  background-color: #00d36d;
+
+  &:hover {
+    color: white;
+    background-color: #00d36d;
+  }
+}
+
 .myButtonMore {
   color: white;
   background-color: #00d36d;

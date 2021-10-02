@@ -63,7 +63,7 @@ const BrandsList = ({ brandData, title }) => {
     filterBrands(filter)
     setBrands([...filtersBrand])
   }
-  console.log(toggle);
+
   const titleButton = getTitleButton(brands.length - currentBrands);
 
   return (
@@ -72,6 +72,7 @@ const BrandsList = ({ brandData, title }) => {
 
       <div className="brands__filter">
         <MyFilter
+          selectedFilter={filter}
           onChange={filterBrands}
           onMore={{ onMoreOptions, renderOptions }}
           options={filterOptions.slice(0, currentOptions)} />
