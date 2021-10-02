@@ -14,7 +14,7 @@ const BrandsList = ({ brandData, title }) => {
   const [toggle, setToggle] = useState(true)
   const [currentBrands, setCurrentBrands] = useState(5)
   const [filter, setFilter] = useState('all')
-  const [filtersBrand, setFilterBrand] = useState()
+  const [filtersBrand, setFilterBrand] = useState([])
 
   const filterBrands = (filter) => {
     setFilter(filter)

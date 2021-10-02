@@ -50,7 +50,14 @@ const generateCategory = () => ({
   8: 'cinema',
   9: 'connect',
   10: 'lottery',
-}[getRandomInt(0, 10)]);
+  11: 'sport',
+  12: 'trip',
+  13: 'health',
+  14: 'insurance',
+  15: 'immovables',
+  16: 'entertainment',
+  17: 'education',
+}[getRandomInt(0, 17)]);
 
 function createId() {
   const random = Math.random();
