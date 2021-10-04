@@ -16,8 +16,11 @@ const BrandsList = ({ brandData, title }) => {
   const [currentBrands, setCurrentBrands] = useState(5)
   const [filter, setFilter] = useState('all')
   const [filtersBrand, setFilterBrand] = useState(brandData)
+  const [currentOffer, setCurrentOffer] = useState(true)
+
 
   const filterBrands = (filter) => {
+    setCurrentOffer(!currentOffer)
     setFilter(filter)
     setCurrentBrands(5)
 
@@ -52,7 +55,7 @@ const BrandsList = ({ brandData, title }) => {
   }
 
   const onMoreBrands = () => {
-    setCurrentBrands(currentBrands + 5)
+    setCurrentBrands(currentBrands + 10)
   }
 
   const onSwitch = () => {
@@ -97,12 +100,13 @@ const BrandsList = ({ brandData, title }) => {
         {brands.length > currentBrands ?
           <MyButton
             typeStyle={'more'}
+
             onClick={() => onMoreBrands()}>
             {titleButton}
           </MyButton> : ''}
       </div>
 
-      <OffersList brands={filtersBrand} filter={filter} />
+      <OffersList currentOffer={currentOffer} brands={filtersBrand} filter={filter} />
     </div>
   )
 }

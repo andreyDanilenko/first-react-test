@@ -1,8 +1,15 @@
 .offer {
-  max-width: 375px;
-  min-width: 320px;
-  margin: 0 10px 16px;
-  flex-grow: 1;
+  width: 100%;
+  margin: 0 0 16px;
+
+  @media (min-width: 567px) {
+    width: calc((100% / 2) - 13px);
+    margin: 0 0 16px 13px;
+  }
+  @media (min-width: 1024px) {
+    width: calc((100% / 3) - 13px);
+    margin: 0 0 16px;
+  }
 
   &__img {
     display: block;

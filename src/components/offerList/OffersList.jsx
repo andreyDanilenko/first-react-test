@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { filterOptions } from '../../utils/flterOptions';
+import { getPromoTitle } from '../../utils/utils';
 import OfferItem from '../offerItem/offerItem';
 import MyButton from '../UI/button/MyButton';
 import './offersList.scss'
@@ -15,11 +16,22 @@ function OffersList(props) {
     }
   });
 
+  if (props.currentOffer === false && currentOffers !== 3) {
+    setCurrentOffers(3)
+  }
+
+  const onMoreOffers = () => {
+    setCurrentOffers(currentOffers + 6)
+  }
+
+  const offerTitle = getPromoTitle(offers.length)
+  const offerTitleButton = getPromoTitle(offers.length - currentOffers)
+
   return (
     <div className='offers'>
       <h2>{props.filter === 'all' ?
-        offers.length + ' предложений от партнеров' : offers.length ?
-          offers.length + ' предложений от партнеров в категории ' + `«${title}»` : ''
+        ` ${offerTitle} от партнеров` : offers.length ?
+          ` ${offerTitle}  от партнеров в категории ` + `«${title}»` : ''
       }</h2>
       <div className="offers__items">
         {offers.slice(0, currentOffers).map(offer =>
@@ -29,8 +41,10 @@ function OffersList(props) {
 
       <div className="offers__button-more">
         {offers.length > currentOffers ?
-          <MyButton typeStyle={'more'}>
-            Еще {offers.length - currentOffers}
+          <MyButton
+            typeStyle={'more'}
+            onClick={() => onMoreOffers()}>
+            Еще {offerTitleButton}
           </MyButton> : ''}
       </div>
 

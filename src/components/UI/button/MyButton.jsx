@@ -4,8 +4,6 @@ import classButton from './MyButton.module.scss'
 const MyButton = ({ children, ...props }) => {
   let className = classButton.myButton + ' ';
 
-  console.log(props.active);
-
   switch (props.typeStyle) {
     case 'more':
       className += classButton.myButtonMore;
