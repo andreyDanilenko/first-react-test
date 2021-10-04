@@ -1,0 +1,18 @@
+.offers {
+  &__title {
+    margin: 60px 0 40px;
+  }
+
+  &__items {
+    margin: 60px -10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__button-more {
+    margin: 15px 0 60px;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -6,6 +6,7 @@ import { getTitleButton } from '../../utils/utils';
 import MyButton from '../UI/button/MyButton';
 import MyFilter from '../UI/filter/MyFilter';
 import MySwitchButton from '../UI/switchButton/MySwitchButton';
+import OffersList from '../offerList/OffersList';
 
 const BrandsList = ({ brandData, title }) => {
   const [brands, setBrands] = useState(brandData)
@@ -14,7 +15,7 @@ const BrandsList = ({ brandData, title }) => {
   const [toggle, setToggle] = useState(true)
   const [currentBrands, setCurrentBrands] = useState(5)
   const [filter, setFilter] = useState('all')
-  const [filtersBrand, setFilterBrand] = useState([])
+  const [filtersBrand, setFilterBrand] = useState(brandData)
 
   const filterBrands = (filter) => {
     setFilter(filter)
@@ -37,7 +38,6 @@ const BrandsList = ({ brandData, title }) => {
 
       return setBrands([...brandData].filter((brand) => brand.popular))
     }
-
 
     setFilterBrand([...brandData].filter((brand) => brand.isСategory === filter))
     if (!toggle) {
@@ -87,7 +87,7 @@ const BrandsList = ({ brandData, title }) => {
         <a className={!toggle ? "brands__link-switch-use brands__link-switch-use--active" : "brands__link-switch-use"}>Принимают спасибо</a>
       </div>
 
-      <div className="brands__item">
+      <div className="brands__items">
         {brands.slice(0, currentBrands).map(brand =>
           <BrandItem brand={brand} toggle={toggle} key={brand.id} />
         )}
@@ -98,10 +98,11 @@ const BrandsList = ({ brandData, title }) => {
           <MyButton
             typeStyle={'more'}
             onClick={() => onMoreBrands()}>
-            Еще {titleButton}
+            {titleButton}
           </MyButton> : ''}
       </div>
 
+      <OffersList brands={filtersBrand} filter={filter} />
     </div>
   )
 }

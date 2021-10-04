@@ -17,8 +17,11 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
+
     new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    // "babel-plugin-styled-components",
+
   ],
   module: {
     rules: [

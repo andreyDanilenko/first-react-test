@@ -12,6 +12,15 @@
     animation-fill-mode: forwards;
   }
 
+  @keyframes examp {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   &:hover &__percent,
   &:hover &__title {
     transition: 0.5s;

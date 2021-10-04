@@ -3,12 +3,11 @@
     margin: 0 -10px 25px -10px;
   }
 
-  &__item {
+  &__items {
     margin: 60px -10px 0 -10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    box-sizing: border-box;
   }
 
   &__button-switch {
@@ -36,7 +35,7 @@
   }
 
   &__button-more {
-    margin-top: 15px;
+    margin: 15px 0 60px;
     display: flex;
     justify-content: center;
   }

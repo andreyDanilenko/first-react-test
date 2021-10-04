@@ -38,6 +38,19 @@ const generatePoster = () => ({
   10: '../../assets/img/tripster.png',
 }[getRandomInt(0, 10)]);
 
+
+const generatePromoPoster = () => ({
+  0: '../../assets/img/offer-electrolux.png',
+  1: '../../assets/img/offer-evroset.png',
+  2: '../../assets/img/offer-mvideo.png',
+}[getRandomInt(0, 2)]);
+
+const generatePromoDescription = () => ({
+  0: '20% спасибо за технику Electrolux',
+  1: '10% спасибо за покупки в черную пятницу',
+  2: '15% спасибо для студентов',
+}[getRandomInt(0, 2)]);
+
 const generateCategory = () => ({
   0: 'all',
   1: 'popular',
@@ -73,12 +86,13 @@ const generateObject = () => (
     'name': generateBrand(),
     'isUse': Boolean(getRandomInt(0, 1)),
     'isСategory': generateCategory(),
-    'popular': getRandomInt(0, 10) < 2 ? true : false,
-    'promo': {
+    'popular': getRandomInt(0, 100) < 2 ? true : false,
+    'promo': getRandomInt(0, 13) < 3 ? {
       'title': 'Apple Music за СПАСИБО',
-      'poster': '../../assets/img/apple-promo.jpg',
+      'poster': generatePromoPoster(),
       'time': 'C 17 Декабря 2018 г. по 17 Декабря 2019 г.',
-    }
+      "description": generatePromoDescription(),
+    } : '',
   }
 );
 

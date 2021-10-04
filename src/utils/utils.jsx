@@ -19,5 +19,5 @@ export const getTitleButton = (num) => {
   if (isThree) {
     str = numStr + ' партнеров'
   }
-  return str;
+  return 'Еще ' + str;
 }
