@@ -1,6 +1,18 @@
 .offer {
+  cursor: pointer;
   width: 100%;
   margin: 0 0 16px;
+
+  &:hover {
+    animation-name: example;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+  }
+
+  &:not(:hover) {
+    animation-name: exampl;
+    animation-duration: 0.8s;
+  }
 
   @media (min-width: 567px) {
     width: calc((100% / 2) - 18px);

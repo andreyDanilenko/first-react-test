@@ -1,10 +1,30 @@
 .brand {
   cursor: pointer;
-  width: 218px;
+  width: 100%;
   padding: 20px;
   margin: 0 10px 16px;
   border-radius: 8px;
   background-color: white;
+
+  @media (min-width: 367px) {
+    width: calc((100% / 2) - 18px);
+    margin: 0 9px 16px;
+  }
+
+  @media (min-width: 567px) {
+    width: calc((100% / 3) - 18px);
+    margin: 0 9px 16px;
+  }
+
+  @media (min-width: 767px) {
+    width: calc((100% / 4) - 18px);
+    margin: 0 9px 16px;
+  }
+
+  @media (min-width: 1024px) {
+    width: calc((100% / 5) - 18px);
+    margin: 0 9px 16px;
+  }
 
   &:hover {
     animation-name: example;
