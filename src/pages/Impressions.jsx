@@ -1,7 +1,9 @@
 import React from "react";
 const Impressions = () => {
   return (
-    <h1>Впечатления</h1>
+    <div className="main">
+      <h1>Впечатления</h1>
+    </div>
   )
 }
 

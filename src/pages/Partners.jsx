@@ -5,7 +5,7 @@ import { brandData } from "../mock/data";
 
 const Partners = () => {
   return (
-    <div>
+    <div className="main">
       <BrandsList
         brandData={brandData}
         title='Партнеры и предложения'

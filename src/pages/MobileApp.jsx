@@ -1,7 +1,10 @@
 import React from "react";
+
 const MobileApp = () => {
   return (
-    <h1>Мобильное приложение</h1>
+    <div className="main">
+      <h1>Мобильное приложение</h1>
+    </div>
   )
 }
 
