@@ -5,10 +5,10 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    padding: 40px 20px;
   }
 
   &__primary-title {
-    margin-top: 40px;
     text-align: start;
   }
 
@@ -37,7 +37,6 @@
   }
 
   &__links {
-    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -53,5 +52,10 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 42px;
+  }
+
+  .active {
+    opacity: 1;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.3);
   }
 }

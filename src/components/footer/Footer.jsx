@@ -6,7 +6,7 @@ import Logo from '../../assets/img/footer-logo.png'
 function Footer() {
   return (
     <div className="footer">
-      <div className="container footer__wrapper">
+      <div className=" footer__wrapper container">
         <div className="footer__primary">
           <h2 className="footer__primary-title">900</h2>
           <p className="footer__primary-description">По России бесплатно</p>
