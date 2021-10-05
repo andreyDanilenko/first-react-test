@@ -10,7 +10,7 @@ const MyFilter = ({ options, onChange, onMore, selectedFilter }) => {
           typeStyle={'filter'}
           onClick={() => onChange(option.value)}
           key={option.value}
-          active={String(option.value === selectedFilter)}
+          active={(option.value === selectedFilter).toString()}
           value={option.value}>{option.name}
         </MyButton>
       )}

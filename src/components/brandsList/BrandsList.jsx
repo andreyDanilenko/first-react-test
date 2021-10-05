@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import BrandItem from '../brandItem/BrandItem';
 import './brandsList.scss';
 import { filterOptions } from '../../utils/flterOptions';
@@ -7,6 +7,7 @@ import MyButton from '../UI/button/MyButton';
 import MyFilter from '../UI/filter/MyFilter';
 import MySwitchButton from '../UI/switchButton/MySwitchButton';
 import OffersList from '../offerList/OffersList';
+import BrandStats from '../brandStats/BrandStats';
 
 const BrandsList = ({ brandData, title }) => {
   const [brands, setBrands] = useState(brandData)
@@ -17,7 +18,6 @@ const BrandsList = ({ brandData, title }) => {
   const [filter, setFilter] = useState('all')
   const [filtersBrand, setFilterBrand] = useState(brandData)
   const [currentOffer, setCurrentOffer] = useState(true)
-
 
   const filterBrands = (filter) => {
     setCurrentOffer(!currentOffer)
@@ -107,6 +107,7 @@ const BrandsList = ({ brandData, title }) => {
       </div>
 
       <OffersList currentOffer={currentOffer} brands={filtersBrand} filter={filter} />
+      <BrandStats brands={[...brandData]} />
     </div>
   )
 }

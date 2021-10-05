@@ -15,14 +15,18 @@ const generateSaleSave = () => ({
   1: '2%',
   2: '3,5%',
   3: '4,5%',
-}[getRandomInt(0, 3)]);
+  4: '5,5%',
+  5: '7,5%',
+}[getRandomInt(0, 5)]);
 
 const generateSaleUse = () => ({
   0: '25%',
   1: '30%',
-  2: 'до 40%',
-  3: 'до 90%',
-}[getRandomInt(0, 3)]);
+  2: '40%',
+  3: '50%',
+  4: '75%',
+  5: '90%',
+}[getRandomInt(0, 5)]);
 
 const generatePoster = () => ({
   0: '../../assets/img/bork.png',

@@ -2,9 +2,6 @@ import React from 'react'
 import './offerItem.scss'
 
 function OfferItem(props) {
-
-  console.log(props.offer.promo.description);
-
   return (
     <div className='offer'>
       <img className='offer__img' src={props.offer.promo.poster} alt='promo' />

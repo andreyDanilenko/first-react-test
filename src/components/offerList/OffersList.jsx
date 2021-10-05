@@ -35,7 +35,7 @@ function OffersList(props) {
       }</h2>
       <div className="offers__items">
         {offers.slice(0, currentOffers).map(offer =>
-          <OfferItem offer={offer} />
+          <OfferItem key={offer.id} offer={offer} />
         )}
       </div>
 
