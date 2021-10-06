@@ -30,9 +30,20 @@ function Footer() {
               <li><NavLink to="/charity">Благотворительность</NavLink></li>
             </ul>
           </div>
-          <div className="footer__contacts">
 
+          <div className="footer__contacts">
+            <ul className="footer__store-list">
+              <li className="footer__store-item"></li>
+              <li className="footer__store-item"></li>
+            </ul>
+            <ul className="footer__social-list">
+              <li className="footer__social-item"></li>
+              <li className="footer__social-item"></li>
+              <li className="footer__social-item"></li>
+              <li className="footer__social-item"></li>
+            </ul>
           </div>
+          <p className="footer__description">Политика АО «ЦПЛ» в отношении обработки персональных данных и Согласие на обработку данных участника Программы «Спасибо от Сбербанка»</p>
         </div>
       </div>
     </div>

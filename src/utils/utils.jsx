@@ -37,7 +37,6 @@ export const getPromoTitle = (num) => {
     || numStr === '13'
     || numStr === '14';
 
-
   if (isOne) {
     str = numStr + ' предложения'
   }
@@ -49,5 +48,3 @@ export const getPromoTitle = (num) => {
   }
   return  str;
 }
-
-

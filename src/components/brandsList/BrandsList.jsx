@@ -9,7 +9,7 @@ import MySwitchButton from '../UI/switchButton/MySwitchButton';
 import OffersList from '../offerList/OffersList';
 import BrandStats from '../brandStats/BrandStats';
 
-const BrandsList = ({ brandData, title }) => {
+const BrandsList = ({ brandData }) => {
   const [brands, setBrands] = useState(brandData)
   const [currentOptions, setCurrentOptions] = useState(9)
   const [renderOptions, setRenderOptions] = useState(true)
@@ -74,7 +74,7 @@ const BrandsList = ({ brandData, title }) => {
 
   return (
     <div className="brands container">
-      <h1 className="brands__title">{title}</h1>
+      <h1 className="brands__title">Партнеры и предложения</h1>
 
       <div className="brands__filter">
         <MyFilter

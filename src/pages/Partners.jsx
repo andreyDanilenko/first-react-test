@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import '../components/app.scss'
 import BrandsList from "../components/brandsList/BrandsList";
 import { brandData } from "../mock/data";
@@ -8,7 +8,6 @@ const Partners = () => {
     <div className="main">
       <BrandsList
         brandData={brandData}
-        title='Партнеры и предложения'
       />
     </div>
   )
