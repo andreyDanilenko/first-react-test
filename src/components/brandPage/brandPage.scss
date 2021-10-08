@@ -1,4 +1,8 @@
 .brand-page {
+  &__title {
+    margin: 20px 0 40px;
+  }
+
   &__link {
     margin-top: 70px;
     display: block;
@@ -7,5 +11,101 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 30px;
+  padding-bottom: 50px;
+
+  &__poster {
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  &__period {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  &__title {
+    margin: 40px 50px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    &--way {
+      font-weight: 500;
+    }
+  }
+
+  &__list {
+    margin: 19px 50px 0 96px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+
+    &--way {
+      margin-left: 82px;
+    }
+  }
+
+  &__item {
+    &--present {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        top: 50%;
+        left: -14px;
+        transform: translate(0, -50%);
+        background-color: black;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__info {
+    margin: 19px 50px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &__info-link {
+    margin: 24px 50px 0;
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #00d36d;
+
+    &--last {
+      margin: 14px 50px 0;
+    }
+
+    &--result {
+      margin: 0;
+      display: inline-block;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__info-result {
+    margin: 19px 50px 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
