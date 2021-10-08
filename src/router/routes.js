@@ -20,9 +20,9 @@ export const routes = [
   { path: '/impressions', component: Impressions, exact: true },
   { path: '/lottery', component: Lottery, exact: true },
   { path: '/mobile-app', component: MobileApp, exact: true },
-  { path: '/', component: Partners, exact: true },
-  { path: '/s', component: Home, exact: true },
+  { path: '/partners', component: Partners, exact: true },
+  { path: '/home', component: Home, exact: true },
   { path: '/railway-tickets', component: RailwayTickets, exact: true },
-  { path: '/partners/:id', component: BrandPage },
+  { path: '/', component: BrandPage },
 ];
 

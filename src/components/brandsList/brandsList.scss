@@ -1,4 +1,12 @@
 .brands {
+  &__title {
+    font-size: 40px;
+
+    @media (min-width: 1024px) {
+      font-size: 48px;
+    }
+  }
+
   &__filter {
     margin: 0 -10px 25px -10px;
   }

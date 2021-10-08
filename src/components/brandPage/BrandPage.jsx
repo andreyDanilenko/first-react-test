@@ -7,6 +7,8 @@ const BrandPage = () => {
     <div className="main">
       <div className="brand-page container">
         <Link to="/partners" className="brand-page__link" >Скидочные купоны · Развлечения</Link>
+
+        <h1>Apple Music за СПАСИБО</h1>
       </div>
     </div>
   )

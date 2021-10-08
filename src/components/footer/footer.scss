@@ -8,13 +8,25 @@
     padding: 40px 20px;
   }
 
-  &__primary-title {
-    text-align: start;
+  &__primary {
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      text-align: start;
+
+      h2 {
+        text-align: start;
+      }
+    }
   }
 
   &__primary-img {
-    display: block;
-    margin-top: 55px;
+    margin-top: 30px;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 
   &__primary-description {
@@ -29,7 +41,12 @@
   }
 
   &__main {
-    margin-left: 130px;
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+      margin-left: 130px;
+    }
   }
 
   &__nav a {
@@ -37,9 +54,13 @@
   }
 
   &__links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+    }
   }
 
   &__links li {
