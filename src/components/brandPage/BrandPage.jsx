@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import Map from '../map/Map';
 import './brandPage.scss'
 
 const BrandPage = () => {
@@ -37,6 +39,10 @@ const BrandPage = () => {
             <p>Применяются соответствующие условия <a href='#' className="card__info-link card__info-link--result">(подробнее).</a></p>
             <p> Промокодом может воспользоваться лицо старше 13 лет, чье местоположение совпадает со страной/регионом магазина, в котором активируется код.
               Требуются совместимые продукты и сервисы. Apple Music — зарегистрированная торговая марка Apple. Apple не является участником или спонсором этой промоакции.</p>
+          </div>
+          <div>
+
+            <Map />
           </div>
         </div>
       </div>
