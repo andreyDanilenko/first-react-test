@@ -4,7 +4,6 @@ const defaultState = {
   brands: [],
   isFetching: true,
 }
-const rod = 4
 
 export default function reposReducer(state = defaultState, action) {
   console.log(action);
