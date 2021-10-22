@@ -21,8 +21,8 @@ export const routes = [
   { path: '/lottery', component: Lottery, exact: true },
   { path: '/mobile-app', component: MobileApp, exact: true },
   { path: '/partners', component: Partners, exact: true },
-  { path: '/home', component: Home, exact: true },
+  { path: '/', component: Home, exact: true },
   { path: '/railway-tickets', component: RailwayTickets, exact: true },
-  { path: '/', component: BrandPage },
+  { path: '/partners/:id', component: BrandPage },
 ];
 
