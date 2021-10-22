@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container navbar__wrapper">
-        <img src={Logo} alt="logo" className="navbar__logo" />
+        <NavLink to="/"> <img src={Logo} alt="logo" className="navbar__logo" /></NavLink>
         <ul className="navbar__links">
           {/* Link позволяет испльзовать навигацию без перезагрузки страницы */}
           <li><NavLink activeClassName="active" to="/coupons">Купоны</NavLink></li>
